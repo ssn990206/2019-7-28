@@ -1,9 +1,184 @@
 <!DOCTYPE html>
 <html>
-    <head>
-    </head>
 
-    <body>
-    </body>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar_fix">
+        <img class="" height="25" src="C:\Users\user\Desktop\practice-1\avatar.svg">
+        <img class="" height="30" src="C:\Users\user\Desktop\practice-1\logo.svg">
+        <img class="" height="25" src="C:\Users\user\Desktop\practice-1\shopping-bag.svg">
+    </nav>
+
+    <div class="content address_section">
+        <div class="content_slogan">把您喜愛的美食親手外送可您</div>
+        <div>
+            <div class="input-group mb-3">
+                <input type="text" border-radius="0" class="content_form" placeholder="輸入您欲送達的地址"
+                    aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                </div>
+            </div>
+            <div class="content_button">
+                <button type="button" class="btn content_button_css">外送</button>或
+                <button type="button" class="btn content_button_css">外帶自取</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="join"></div>
+    <div class="join_text">
+        <div class="join_text_slogan">加入foodpanda，把你的美食分享給大家！</div>
+        <div class="join_text_content">想要上千名新顧客試試你的美食嗎？我們想，相信你也是！</div>
+        <div class="join_text_content">達到這個目的超簡單：我們把你的菜單放上線、幫你處理訂單、到餐廳去取餐、將餐點外送給顧客們！</div>
+        <div class="join_text_content">還等什麼？一起和我們開啟這個外送美食給大家的旅程吧！</div>
+        <button type="button" class="btn join_button_css">立即加入</button>
+    </div>
+
+    <div class="city">
+        <div class="city_tainan"></div>
+        <span class="city_tainan_name">台南市</span>
+    </div>
+
+    <style type="text/css">
+        .navbar_logo {
+            color: #D70F64;
+            height: 30px;
+        }
+
+        .content {
+            padding-bottom: 64px;
+            position: relative;
+            width: 100%;
+            max-width: 1425px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .content_slogan {
+            padding-top: 50px;
+            padding-bottom: 50px;
+            padding-right: 70px;
+            font-size: 1.4rem;
+        }
+
+        .content_form {
+            display: block;
+            width: 100%;
+            height: calc(1.5em + .75rem + 2px);
+            padding: .375rem .75rem;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #495057;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            box-shadow: 0px 0px 20px #d1d1d1;
+        }
+
+        .address_section {
+            background-image: url(https://images.deliveryhero.io/image/foodpanda/hero-home-tw.jpg?width=800&height=512);
+            background-position: 70vw;
+            background-repeat: no-repeat;
+            background-size: 420px;
+        }
+
+        .content_button {
+            margin-top: 10px;
+        }
+
+        .content_button_css {
+            background-color: #D70F64;
+            border-radius: 0%;
+            color: white;
+            font-size: 1rem;
+        }
+
+        .join {
+            background-image: url(https://images.deliveryhero.io/image/foodpanda/home-vendor-tw.jpg?width=800&height=512);
+            height: 280px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .join_text {
+            width: 90vw;
+            z-index: 3;
+            background-color: white;
+            position: relative;
+            left: 5vw;
+            top: -70px;
+            padding-left: 20px;
+            padding-right: 20px;
+            box-shadow: 0px 0px 20px #d1d1d1;
+        }
+
+        .join_text_slogan {
+            padding-top: 10px;
+            padding-bottom: 25px;
+            font-weight: 400;
+            font-size: 1.3rem;
+        }
+
+        .join_text_content {
+            padding-top: 5px;
+            padding-bottom: 5px;
+            color: #707070;
+            font-size: 0.8rem;
+        }
+
+        .join_button_css {
+            width: 100%;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            background-color: #D70F64;
+            border-radius: 0%;
+            color: white;
+            font-size: 1rem;
+        }
+
+        .city {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .city_tainan {
+            background-image: url(https://images.deliveryhero.io/image/fd-tw/city-tile/city-tile-Tainan.jpg?webp=0);
+            height: 150px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .city_tainan_name {
+            position: relative;
+            color: #ffffff;
+            font-size: 1.5rem;
+            top: -50px;
+            left: 5px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+<script>
+</script>
+
 </html>
-    
