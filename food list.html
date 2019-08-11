@@ -18,13 +18,66 @@
         <img class="" height="25" src="image/shopping-bag.svg">
     </nav>
 
-    <div id="foodList">
-        <div>
-            <li class="list-group-item" v-for="food in food_data">{{food.name}} - {{food.district}}</li>
+
+    <div id="foodList" class="foodlist_div">
+        <ul class="list-group-item" v-for="food in food_data">
+            <a data-toggle="modal" data-target="#exampleModalLong">
+                <div class="foodlist_name">{{food.name}}
+                </div>
+                <hr class="my-1">
+                <div class="foodlist_index">營業時間：{{food.open_time}}</div>
+                <div class="foodlist_index">店家地址：{{food.address}}</div>
+                <div class="foodlist_index">店家電話：{{food.tel}}</div>
+            </a>
+        </ul>
+        <div class="modal fade" id="courseModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        1231312312312
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <style type="text/css"></style>
+
+
+
+
+    <style type="text/css">
+        .foodlist {
+            padding-top: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .foodlist_div {
+            padding-bottom: 7px;
+            box-shadow: 0px 0px 20px #d1d1d1;
+        }
+
+        .foodlist_name {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .foodlist_index {
+            font-size: 0.9rem;
+            color: #495057;
+        }
+    </style>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -51,13 +104,14 @@
                     type: "GET",
                     url: "https://www.twtainan.net/data/shops_zh-tw.json",
                     success: function (data) {
-                        console.log(data.food);
-                        vm.food_data = data.food;
+                        console.log(data);
+                        vm.food_data = data;
                     }
                 });
             },
         },
     });
+
 </script>
 
 </html>
